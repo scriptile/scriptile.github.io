@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Scriptile privacy policy and support. 私隱政策及支援。">
+<title>Scriptile Privacy & Support</title>
+<style>
+html, body { margin: 0; }
+/* Layout: one readable column, a small sticky language switch, a "code comment" header that echoes the script permission line. */
+:root {
+  --bg: #f7f8f6;
+  --surface: #ffffff;
+  --fg: #1d2421;
+  --muted: #5d6863;
+  --line: #dde2de;
+  --accent: #1f7a5c;
+  --accent-soft: #e3f1ea;
+  --warn: #8a5a00;
+  --warn-soft: #fbf1dc;
+  --font-body: -apple-system, "PingFang HK", system-ui, sans-serif;
+  --font-zh: "PingFang HK", -apple-system, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121614; --surface: #1a201d; --fg: #e6ebe8; --muted: #9aa69f; --line: #2c3531;
+    --accent: #5cc79d; --accent-soft: #1d332a; --warn: #f0c46a; --warn-soft: #33290f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121614; --surface: #1a201d; --fg: #e6ebe8; --muted: #9aa69f; --line: #2c3531;
+  --accent: #5cc79d; --accent-soft: #1d332a; --warn: #f0c46a; --warn-soft: #33290f; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body);
+  font-size: 16px; line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body.zh { font-family: var(--font-zh); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 28px 64px; display: grid; gap: 28px; }
+header { display: grid; gap: 10px; }
+.code { font-family: var(--font-mono); font-size: 13px; color: var(--muted); overflow-x: auto; white-space: nowrap; }
+.code b { color: var(--accent); font-weight: 500; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-size: 20px; margin: 0; text-wrap: balance; }
+h3 { font-size: 16px; margin: 0; }
+p, ul { margin: 0; }
+ul { padding-left: 1.2em; display: grid; gap: 6px; }
+.meta { color: var(--muted); font-size: 14px; }
+.switch { display: flex; gap: 6px; }
+.switch button {
+  font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer;
+}
+.switch button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.draft { background: var(--warn-soft); color: var(--warn); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+.summary { background: var(--accent-soft); border-radius: 12px; padding: 18px 18px; display: grid; gap: 8px; }
+.summary h2 { color: var(--accent); }
+section { display: grid; gap: 12px; }
+section + section { border-top: 1px solid var(--line); padding-top: 24px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.table { overflow-x: auto; }
+th, td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 13px; color: var(--muted); font-weight: 500; letter-spacing: 0.02em; }
+td:first-child { white-space: nowrap; font-weight: 500; padding-right: 16px; }
+a.mail { color: var(--fg); text-decoration: none; }
+.mail { font-family: var(--font-mono); font-size: 15px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; user-select: all; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="code" aria-hidden="true">// permissions: <b>none collected</b> · server: <b>none</b> · account: <b>none</b></div>
+    <div class="switch" role="group" aria-label="Language">
+      <button id="btn-zh" type="button" aria-pressed="true" data-l="zh">繁體中文</button>
+      <button id="btn-en" type="button" aria-pressed="false" data-l="en">English</button>
+    </div>
+    <div lang="zh-Hant" data-l="zh">
+      <h1>Scriptile 私隱政策及支援</h1>
+      <p class="meta">生效日期：2026 年 11 月（v1.0）· 適用於 iPhone 版 Scriptile 及其小工具</p>
+    </div>
+    <div lang="en" data-l="en" hidden>
+      <h1>Scriptile Privacy Policy and Support</h1>
+      <p class="meta">Effective: November 2026 (v1.0) · Covers the Scriptile iPhone app and its widgets</p>
+    </div>
+  </header>
+
+
+  <!-- 中文 -->
+  <div data-l="zh">
+    <div class="summary">
+      <h2>一句講晒</h2>
+      <p>Scriptile 沒有帳戶、沒有伺服器、沒有分析追蹤。我們不收集、不出售、不分享你的任何資料。所有腳本都在你的 iPhone 上執行。</p>
+    </div>
+  </div>
+  <div data-l="en" hidden>
+    <div class="summary">
+      <h2>In short</h2>
+      <p>Scriptile has no account, no server and no analytics. We do not collect, sell or share any of your data. Every script runs on your iPhone.</p>
+    </div>
+  </div>
+
+  <div data-l="zh" style="display:grid;gap:24px">
+    <section>
+      <h2>我們收集的資料</h2>
+      <p>無。Scriptile 的開發者不會收到你的腳本、執行記錄、位置、日曆或任何其他資料。App 內沒有廣告、分析或當機回報工具。</p>
+    </section>
+    <section>
+      <h2>資料存放在哪裡</h2>
+      <ul>
+        <li><b>腳本</b>：純 .js 檔案，存放在 iPhone 上；如果你開啟 iCloud 雲碟，則存放在你自己的 iCloud 帳戶，由 Apple 處理。</li>
+        <li><b>執行記錄及小工具內容</b>：只存放在此裝置，不會備份；只有你選擇分享時才會匯出。</li>
+        <li><b>鑰匙圈（Keychain）</b>：每個腳本只能讀寫自己的項目，存放在 iPhone 的鑰匙圈。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>腳本和權限</h2>
+      <p>腳本由你自己撰寫或加入。腳本使用以下功能前，Scriptile 會先詢問你，你可隨時在每個腳本的「私隱」頁面收回：</p>
+      <div class="table"><table>
+        <tr><th>功能</th><th>用途</th></tr>
+        <tr><td>網絡</td><td>只可連接你批准的網站。每次連線都記錄在該腳本的網絡記錄，只存放在此裝置。</td></tr>
+        <tr><td>位置</td><td>只在腳本要求時讀取，例如顯示附近天氣。不會傳送給我們。</td></tr>
+        <tr><td>日曆及提醒事項</td><td>只在腳本要求時讀取或寫入。</td></tr>
+        <tr><td>通知</td><td>由腳本安排的本機通知。沒有推送伺服器。</td></tr>
+      </table></div>
+    </section>
+    <section>
+      <h2>內置範例連接的網站</h2>
+      <p>範例庫的部分範例會直接從 iPhone 連接公開資料來源，例如九巴、城巴、專線小巴、港鐵、香港天文台、維基媒體、Hacker News 及 dog.ceo。這些連線不經過我們，由該網站按其私隱政策處理。範例同樣要先取得你的網絡權限。</p>
+    </section>
+    <section>
+      <h2>兒童</h2>
+      <p>Scriptile 是開發者工具，並非為 13 歲以下兒童設計。我們不收集任何人的資料，包括兒童。</p>
+    </section>
+    <section>
+      <h2>政策更新</h2>
+      <p>如本政策有改動，我們會更新本頁及生效日期。重大改動會在 App 的更新說明中列出。</p>
+    </section>
+    <section>
+      <h2 id="support-zh">支援</h2>
+      <p>有問題、發現錯誤或想提出建議，請電郵：</p>
+      <p><a class="mail" href="mailto:scriptile.app@gmail.com">scriptile.app@gmail.com</a></p>
+      <p class="meta">回覆時請附上 iPhone 型號、iOS 版本及腳本名稱。如需要，可在腳本的執行記錄按「分享」，將記錄附上；匯出前你可先查看內容。</p>
+    </section>
+  </div>
+
+  <div data-l="en" hidden style="display:grid;gap:24px">
+    <section>
+      <h2>Data we collect</h2>
+      <p>None. The developer of Scriptile never receives your scripts, run logs, location, calendars or any other data. The app contains no advertising, analytics or crash-reporting tools.</p>
+    </section>
+    <section>
+      <h2>Where your data is kept</h2>
+      <ul>
+        <li><b>Scripts</b> are plain .js files on your iPhone. If you turn on iCloud Drive, they are stored in your own iCloud account, handled by Apple.</li>
+        <li><b>Run logs and widget content</b> stay on this device and are not backed up. They leave it only when you share them.</li>
+        <li><b>Keychain</b> items are stored in the iPhone keychain, and each script can read and write only its own items.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Scripts and permissions</h2>
+      <p>You write or add every script yourself. Scriptile asks you before a script uses any of the following, and you can take access back at any time from each script's Privacy page:</p>
+      <div class="table"><table>
+        <tr><th>Feature</th><th>How it is used</th></tr>
+        <tr><td>Network</td><td>Only the websites you approve. Every request is recorded in that script's network history, kept on this device.</td></tr>
+        <tr><td>Location</td><td>Read only when a script asks, for example to show nearby weather. Never sent to us.</td></tr>
+        <tr><td>Calendars and Reminders</td><td>Read or written only when a script asks.</td></tr>
+        <tr><td>Notifications</td><td>Local notifications scheduled by your scripts. There is no push server.</td></tr>
+      </table></div>
+    </section>
+    <section>
+      <h2>Websites contacted by the built-in examples</h2>
+      <p>Some gallery examples connect from your iPhone directly to public data sources such as KMB, Citybus, GMB minibus, MTR, the Hong Kong Observatory, Wikimedia, Hacker News and dog.ceo. These requests do not pass through us; each site handles them under its own privacy policy. Examples also need your network permission first.</p>
+    </section>
+    <section>
+      <h2>Children</h2>
+      <p>Scriptile is a developer tool and is not designed for children under 13. We collect no data from anyone, children included.</p>
+    </section>
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, we will update this page and its effective date. Significant changes will also be listed in the app's release notes.</p>
+    </section>
+    <section>
+      <h2 id="support-en">Support</h2>
+      <p>For questions, bug reports or suggestions, email:</p>
+      <p><a class="mail" href="mailto:scriptile.app@gmail.com">scriptile.app@gmail.com</a></p>
+      <p class="meta">Please include your iPhone model, iOS version and the script name. If it helps, use Share on the script's run log to attach it; you can review the text before it is exported.</p>
+    </section>
+  </div>
+</div>
+
+<script>
+(function () {
+  const buttons = document.querySelectorAll(".switch button");
+  function set(l) {
+    document.querySelectorAll("[data-l]").forEach(el => {
+      if (el.tagName === "BUTTON") el.setAttribute("aria-pressed", String(el.dataset.l === l));
+      else el.hidden = el.dataset.l !== l;
+    });
+    document.body.classList.toggle("zh", l === "zh");
+    document.documentElement.lang = l === "zh" ? "zh-Hant" : "en";
+    try { localStorage.setItem("lang", l); } catch (_) {}
+  }
+  buttons.forEach(b => b.addEventListener("click", () => set(b.dataset.l)));
+  let saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (_) {}
+  set(saved === "en" ? "en" : "zh");
+})();
+</script>
+</body>
+</html>
